@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'portfolio_entries/performance/:id', to: 'portfolio_entries#performance'
+  get 'user/portfolio/:id', to: 'user#portfolio'
 
   get 'notifications/index'
   devise_for :admins

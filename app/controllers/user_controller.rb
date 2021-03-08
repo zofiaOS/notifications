@@ -1,4 +1,5 @@
-class PortfolioEntriesController < ApplicationController
+class UserController < ApplicationController
+  load_and_authorize_resource
   def compute_company_peroformance company
     # TODO implement a real TWR instead of simple average
     @performances = Performance.filter_by_days(30).filter_by_company(company)
@@ -12,7 +13,7 @@ class PortfolioEntriesController < ApplicationController
     twr / @performances.length
   end
 
-  def performance
+  def portfolio
     @entries = PortfolioEntry.where(user: params[:id])
     portfolio_performance = 0
     @entries.each { |entry|

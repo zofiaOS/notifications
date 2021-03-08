@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Devise for user authentication, CanCanCan for authorization, and RailsAdmin for admin panels
 gem 'devise'
 gem 'rails_admin'
+gem 'cancancan'
